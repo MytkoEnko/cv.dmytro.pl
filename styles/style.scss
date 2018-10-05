@@ -28,13 +28,14 @@ body {
     }
   }
     &::before {
-    position: absolute;
-    top: 90px;
-    content: " ";
-    border-top: 0px solid transparent;
-    border-bottom: 184px solid transparent;
-    border-left: 87em solid black;
-    z-index: -1;
+      position: absolute;
+      top: 90px;
+      content: " ";
+      background: #000000;
+      z-index: -1;
+      height: 30%;
+      width: 100%;
+      clip-path: polygon(0 0, 0 100%, 100% 0);
     }
     &::after {
       content: "";
