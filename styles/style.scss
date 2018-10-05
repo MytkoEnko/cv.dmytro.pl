@@ -27,26 +27,6 @@ body {
       font-size: 1em;
     }
   }
-    &::before {
-      position: absolute;
-      top: 90px;
-      content: " ";
-      background: #000000;
-      z-index: -1;
-      height: 30%;
-      width: 100%;
-      clip-path: polygon(0 0, 0 100%, 100% 0);
-    }
-    &::after {
-      content: "";
-    position: absolute;
-    top: 60px;
-    height: 565px;
-    width: 100%;
-    background: url(/img/profile-background.jpg) no-repeat top center;
-    background-size: cover;
-    z-index: -2;
-    }
   .menu {
     float: right;
   }
@@ -70,4 +50,20 @@ body {
     }
 
   }
+}
+.triangle {
+    margin-top: -6px;
+    background: #000000;
+    z-index: -1;
+    height: 15vw;
+    width: 100%;
+    clip-path: polygon(0 0, 0 15vw, 100% 0);
+}
+.face {
+  margin-top: -15vw;
+  height: 40vw;
+  width: 100%;
+  background: url(/img/profile-background.jpg) no-repeat top center;
+  background-size: cover;
+  z-index: -2;
 }
