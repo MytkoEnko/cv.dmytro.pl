@@ -1,6 +1,6 @@
 # cv.dmytro.pl
 
 GitHub gives an opportunity to host your static web pages and run it directly from your repository.
-For testing purposes I've created that repository and perhaps soon it's development will proceed and some content will be added.
+Using that technology I've created an online CV project, so that anyone can check both - the live version of the site as well as it's repository structure and history of building.
 
-As for now it's just testing.
+Hope to join your team! ;)
