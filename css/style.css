@@ -3,6 +3,7 @@ body {
   color: white;
   font-family: 'Titillium Web', sans-serif;
   background-color: black;
+  -webkit-text-size-adjust: none;
 }
 
 .container {
@@ -85,7 +86,7 @@ body {
 .calls .call {
   color: #bfbfbf;
   display: inline-grid;
-  width: 31%;
+  width: calc(100% /3 - 22px);
   text-align: center;
   border: 0.5px solid #131313;
   border-radius: 10px;
@@ -101,10 +102,26 @@ body {
 
 .calls .call p {
   font-size: 1.3em;
+  text-overflow: ellipsis;
 }
 
-.white {
+.white-post {
   color: black;
   background-color: white;
+  display: flex;
   border-radius: 10px;
+}
+
+.white-post > * {
+  margin: 25px;
+}
+
+.white-post > h3 {
+  padding: 2%;
+  border-right: solid 1px black;
+}
+
+.header > h3 {
+  font-size: 2em;
+  text-align: center;
 }
