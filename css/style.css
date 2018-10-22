@@ -106,4 +106,5 @@ body {
 .white {
   color: black;
   background-color: white;
+  border-radius: 10px;
 }
