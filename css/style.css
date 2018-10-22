@@ -18,6 +18,7 @@ body {
 
 .top-bar .branding {
   float: left;
+  margin-top: 12px;
 }
 
 .top-bar .branding h1, .top-bar .branding h2 {
@@ -36,6 +37,7 @@ body {
 
 .top-bar .menu {
   float: right;
+  margin: 16px 0px 0px;
 }
 
 .top-bar .menu-item {
@@ -74,4 +76,29 @@ body {
   background: url(/img/profile-background.jpg) no-repeat top center;
   background-size: cover;
   z-index: -2;
+}
+
+.calls {
+  margin: 40px auto;
+}
+
+.calls .call {
+  color: #bfbfbf;
+  display: inline-grid;
+  width: 31%;
+  text-align: center;
+  border: 0.5px solid #131313;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 4px;
+  line-height: 0em;
+  box-shadow: 0px 0px 1px 0px #131313;
+}
+
+.calls .call i {
+  font-size: 8vw;
+}
+
+.calls .call p {
+  font-size: 1.5em;
 }
