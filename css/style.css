@@ -102,3 +102,8 @@ body {
 .calls .call p {
   font-size: 1.3em;
 }
+
+.white {
+  color: black;
+  background-color: white;
+}
