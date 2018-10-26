@@ -137,11 +137,12 @@ body {
       border-right: solid 1px black;
     }
   }
-  .header > h3 {
+  .chapter > h3 {
     font-size: 2rem;
     text-align: center;
   }
 
+                        /* Sections */
 // Projects
 .project {
   background: #0c0c0c;
@@ -173,6 +174,30 @@ body {
     font-size: 2rem;
     text-align: center;
     font-weight: 100;
+      }
   }
 
-}
+  // Skills
+  .skills {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 2rem;
+    background: #0c0c0c;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 1rem;
+    h4,p {
+      margin: 0px;
+    }
+    h4 {
+      text-align: right;
+    }
+  }
+  // Work experience section styling
+  #experience {
+    span {
+      font-size: 1.3rem;
+    }
+  }
+  .experience {
+
+  }
