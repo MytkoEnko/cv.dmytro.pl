@@ -5,11 +5,13 @@
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-57231751-10"></script>
   <script>
+  if (!window.localStorage.getItem('acceptance')) {
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
     gtag('config', 'UA-57231751-10');
+  }
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -174,6 +176,28 @@ Inkscape, GIMP.</p>
       </div>
   </div>
   </main>
+  <!-- The Cookies wrapper -->
+<div id="terms" class="modal">
+
+  <!-- Cookies content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3>Accept terms to proceed</h3>
+    </div>
+    <div class="modal-body">
+      <p><span>Terms and Conditions</span></p>
+      <p><span>By clicking "Accept Terms" you agree with next statements:</span></p>
+      <p>1. We can use cookies in your web browser. It is required by some moudles of the website, mostly for statistics and "in-page behavior" data collection. That data can be stored on external, even foreign servers of the statistic collection operator.</p>
+      <p>2. The data on that page is personal and is covered by <a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj">General Data Protection Regulation (EU) 2016/679 ("GDPR")</a>. Indeed it can be used and shared, but only for recruitment porposes. No other porposes are permitted.</p>
+      <p>3. Proceeding to content without accepting this Terms is forbiden. Doing so you are automatically agree with current Terms and Conditions and responsible for all possible harmings of these Terms.</p>
+    </div>
+    <div class="modal-footer">
+      <button class="disagree" onclick="declineTerms()">Decline Terms</button>
+      <button class="agree" onclick="acceptTerms()">Accept Terms</button>
+    </div>
+  </div>
+
+</div>
   <!-- Footer content -->
 <footer>
 <br>
