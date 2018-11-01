@@ -19,6 +19,9 @@ body {
       color: white;
     }
 }
+img {
+  max-width: 100%;
+}
 .container {
   width: 80%;
   max-width: 1700px;
@@ -215,18 +218,16 @@ nav {
     }
   }
   // Work experience section styling
-  #experience {
-    span {
-      font-size: 1.3rem;
-    }
-  }
-  .experience {
+  .experience, .bio {
       border: solid 0.5px;
       border-radius: 10px;
       padding: 0px 0px 40px;
       h3 {
         border-bottom: solid 0.3px gray;
         padding-bottom: 15px;
+        span {
+          font-size: 1.3rem;
+        }
       }
       section {
         padding: 0px 2%;
@@ -235,6 +236,9 @@ nav {
         grid-template-rows: repeat(4, minmax(30px, auto));
         grid-template-columns: 3fr 5fr;
         grid-auto-flow: column;
+        h4, h5 {
+          font-size: 1rem;
+        }
     &> * {
       margin:0px;
     }
@@ -249,6 +253,38 @@ nav {
   }
 
   }
+  .bio > div {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    justify-items: center;
+    p {
+      width: 85%;
+      text-align: justify;
+    }
+}
+// footer
+footer {
+  position: relative;
+  margin-top: 150px;
+  background-color: #020202;
+  border-top: 1px solid #060606;
+  .all-rights {
+    background-color: #080808;
+    text-align: center;
+    margin: 20px auto 0px;
+    position: absolute;
+    bottom: 0px;
+    border-top: 1px solid #292929;;
+    width: 100%;
+    padding: 10px 0px 10px;
+  }
+  .in-touch {
+    text-align: center;
+    margin: 30px auto 60px;
+  }
+}
+
 
   //  Cookies acceptance window styling
 
@@ -308,6 +344,7 @@ nav {
     }
   }
 }
+
 /* Add Animation */
 @-webkit-keyframes animatedown {
     from {top:-50%;}
