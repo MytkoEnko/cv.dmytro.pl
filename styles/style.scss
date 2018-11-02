@@ -1,6 +1,14 @@
 //Styling
 
 $menu-item-height: 60px;
+$border-radius: 10px;
+
+// Link icon
+%link-icon {
+  content: " \f0c1";
+  font-family: "Font Awesome 5 Free";
+  color: #444444;
+}
 
 
 html {
@@ -27,18 +35,6 @@ img {
   max-width: 1700px;
   margin: 0px auto;
   }
-
-  //   Grids
-
-.grid {
-  display: grid;
-  &-3col {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  &-4col {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
 
 // Header styling
 
@@ -68,31 +64,30 @@ nav {
 }
   .menu {
     float: right;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
   }
   .menu-item {
     display: inline;
     margin: 0px 5px;
     a {
       float: left;
-      text-decoration: none;
       text-align: center;
       line-height: $menu-item-height;
       height: $menu-item-height;
       width: 120px;
       margin: 0px 15px;
       background: white;
-      border-radius: 10px;
+      border-radius: $border-radius;
       text-transform: uppercase;
       font-weight: 600;
       color: black;
-
     }
-
   }
 }
 
-// Layout styling
-.lead {
+// Header styling
+.banner {
     margin-top: -1px;
 }
 .triangle {
@@ -111,38 +106,40 @@ nav {
   z-index: -2;
 }
 .calls {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
     margin: 40px auto;
     .call {
     color: #bfbfbf;
-    display: inline-grid;
     text-align: center;
     border: 0.5px solid #131313;
-    border-radius: 10px;
-    margin: 5px;
+    border-radius: $border-radius;
     padding: 4px;
-    line-height: 0rem;
     box-shadow: 0px 0px 1px 0px #131313;
     i {
       font-size: 5vw;
     }
     p {
       font-size: 1.3rem;
-      text-overflow: ellipsis;
       line-height: 20px;
     }
-
   }
 }
-  .white-post {
+                        /* Main elements layout */
+
+// Motivation
+
+  .motivation {
     color: black;
     background-color: white;
-    display: block;
-    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    border-radius: $border-radius;
     text-align: justify;
     h3 {
     width: 50%;
     margin: 0 auto;
-    padding-bottom: 13px;
     padding: 10px;
     text-align: center;
     border-bottom: 1px solid black;
@@ -160,12 +157,11 @@ nav {
     }
   }
 
-                        /* Sections */
 // Projects
 .project {
   background: #0c0c0c;
   padding: 1rem;
-  border-radius: 10px;
+  border-radius: $border-radius;
   margin: 2rem 0rem;
   display: grid;
   grid-template-columns: 1fr;
@@ -189,13 +185,12 @@ nav {
     font-size: 1.4rem;
     margin-bottom: 0px;
     a::after {
-    content: ' \f0c1';
-    font-family: "Font Awesome 5 Free";
+    @extend %link-icon;
     font-size: initial;
-    color: #444444;
       }
   }
-  .technologies {
+// Technologies used icons
+  .tech-icons {
     font-size: 2rem;
     text-align: center;
     font-weight: 100;
@@ -205,9 +200,10 @@ nav {
   // Skills
   .skills {
     border: 1px solid black;
-    border-radius: 10px;
+    border-radius: $border-radius;
     padding: 2rem;
     background: #0c0c0c;
+    display: grid;
     grid-template-columns: 1fr 3fr;
     grid-gap: 1rem;
     h4,p {
@@ -216,14 +212,19 @@ nav {
     h4 {
       text-align: right;
     }
+    a::after {
+    @extend %link-icon;
+    font-weight: 600;
+    font-size: smaller;
+    }
   }
   // Work experience section styling
   .experience, .bio {
-      border: solid 0.5px;
-      border-radius: 10px;
+      border: solid 1px;
+      border-radius: $border-radius;
       padding: 0px 0px 40px;
       h3 {
-        border-bottom: solid 0.3px gray;
+        border-bottom: solid 1px gray;
         padding-bottom: 15px;
         span {
           font-size: 1.3rem;
@@ -285,7 +286,6 @@ footer {
   }
 }
 
-
   //  Cookies acceptance window styling
 
   .modal {
@@ -312,7 +312,7 @@ footer {
   text-align: center;
   padding: 30px;
   background: white;
-  border-radius: 10px;
+  border-radius: $border-radius;
   color: black;
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
