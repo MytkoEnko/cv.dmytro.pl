@@ -21,8 +21,21 @@ function declineTerms() {
 }
 
 // Menu toggle Function
-function menuToggle() {
-  let menu = document.getElementsByClassName("menu");
-  menu[0].classList.toggle("visible");
-}
-document.getElementById("menu-toggle").onclick = function() {menuToggle();};
+/*
+  If menu icon is clicked add "visible" class, than with the next
+  click remove it.
+*/
+document.getElementById("menu-toggle").onclick = function() {
+  let menu = document.getElementsByClassName("menu")[0];
+  menu.classList.add("visible");
+  setTimeout(closeMenu, 10);
+function closeMenu(){
+  if (menu.classList.contains("visible")){
+    document.addEventListener('click',function removeMenu(event){
+      menu.classList.remove("visible");
+      document.removeEventListener('click',removeMenu);
+      } );
+    }
+  }
+};
+//
