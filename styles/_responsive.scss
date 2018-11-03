@@ -1,7 +1,16 @@
+$x-small-screen: 480px;
 $small-screen: 768px;
 $middle-screen: 992px;
 $large-screen: 1200px;
 
+/* Very small devices (480px to 768px) */
+@media (min-width: $x-small-screen) {
+  .top-bar > .header-wrapper {
+    width: 80%;
+    margin: 0px auto;
+    grid-template-columns: 6fr 1fr;
+  }
+}
 /* Small devices (tablets, 768px and up) */
 @media (min-width: $small-screen) {
 .modal-content {
@@ -18,6 +27,30 @@ $large-screen: 1200px;
 @media (min-width: $middle-screen) {
   .top-bar nav {
     display: block;
+    a#menu-toggle {
+    display: none;
+    }
+    .menu {
+      display: grid;
+      float: right;
+      grid-template-columns: repeat(4, 1fr);
+      width:unset;
+      position: relative;
+      top:unset;
+      left:unset;
+      transform: unset;
+    }
+    .menu-item {
+      display: inline;
+      align-items: unset;
+      justify-content: unset;
+      a {
+      line-height: $menu-item-height - 10px;
+      height: $menu-item-height - 10px;
+      width: 100px;
+      margin: 0px 12px;
+      }
+    }
   }
   .project {
     grid-template-columns: 1fr 2fr;
@@ -54,5 +87,14 @@ $large-screen: 1200px;
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: $large-screen) {
-
+  .top-bar nav {
+    .menu-item {
+      a {
+      line-height: $menu-item-height;
+      height: $menu-item-height;
+      width: 120px;
+      margin: 0px 19px;
+      }
+    }
+  }
 }

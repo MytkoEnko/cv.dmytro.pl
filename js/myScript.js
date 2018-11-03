@@ -19,3 +19,10 @@ function acceptTerms() {
 function declineTerms() {
     window.location.href = "terms-refused.html";
 }
+
+// Menu toggle Function
+function menuToggle() {
+  let menu = document.getElementsByClassName("menu");
+  menu[0].classList.toggle("visible");
+}
+document.getElementById("menu-toggle").onclick = function() {menuToggle();};
