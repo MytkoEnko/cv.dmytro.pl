@@ -106,6 +106,7 @@ img {
   text-transform: uppercase;
   font-weight: 600;
   color: black;
+  box-shadow: 0px 3px 4px 2px #000000;
 }
 
 .banner {
@@ -357,7 +358,7 @@ footer .in-touch {
   background: white;
   border-radius: 10px;
   color: black;
-  -webkit-animation-name: animatetop;
+  -webkit-animation-name: animatedown;
   -webkit-animation-duration: 0.4s;
   animation-name: animatedown;
   animation-duration: 0.4s;
@@ -461,6 +462,7 @@ footer .in-touch {
     height: 50px;
     width: 100px;
     margin: 0px 12px;
+    box-shadow: unset;
   }
   .project {
     grid-template-columns: 1fr 2fr;
