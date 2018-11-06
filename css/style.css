@@ -506,9 +506,16 @@ footer .in-touch {
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .modal-content {
+    -ms-overflow-style: none;
+  }
   .triangle {
-    clip-path: unset;
-    background: blue;
+    position: relative;
+    z-index: 0;
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGlkPSJ0cnlrdXQiIHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEwMCUnIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiBkYXRhLW5hbWU9IkxheWVyIDEiPjx0aXRsZT5VbnRpdGxlZC0xPC90aXRsZT48cG9seWdvbiBwb2ludHM9IjAsMCAwLDEwMCAxMDAsMCIgLz48L3N2Zz4=);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
   .header-wrapper {
     display: -ms-grid;
@@ -520,6 +527,12 @@ footer .in-touch {
   .header-wrapper #menu-nav {
     -ms-grid-column: 2;
     -ms-grid-row-align: center;
+  }
+  .top-bar .menu {
+    width: 50%;
+  }
+  .top-bar .menu-item a {
+    width: 100%;
   }
   .menu {
     -ms-grid-columns: 1fr;
@@ -560,7 +573,7 @@ footer .in-touch {
   .motivation {
     display: -ms-grid;
     -ms-grid-columns: 1fr;
-    -ms-grid-rows: 1fr 2fr;
+    -ms-grid-rows: auto auto;
   }
   .motivation > h3 {
     -ms-grid-row: 1;
@@ -699,6 +712,10 @@ footer .in-touch {
     left: 0px;
     transform: none;
     -ms-grid-columns: 1fr 1fr 1fr 1fr;
+    width: 100%;
+  }
+  .top-bar .menu-item a {
+    width: 65%;
   }
   .top-bar nav > * > .menu-item {
     display: -ms-grid;
@@ -755,8 +772,29 @@ footer .in-touch {
 }
 
 @supports (-ms-ime-align: auto) {
+  .modal-content {
+    -ms-overflow-style: none;
+  }
   .triangle {
-    clip-path: unset;
-    background: url(/img/triangle.svg);
+    position: relative;
+    z-index: 0;
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGlkPSJ0cnlrdXQiIHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEwMCUnIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiBkYXRhLW5hbWU9IkxheWVyIDEiPjx0aXRsZT5VbnRpdGxlZC0xPC90aXRsZT48cG9seWdvbiBwb2ludHM9IjAsMCAwLDEwMCAxMDAsMCIgLz48L3N2Zz4=);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .top-bar .menu {
+    width: 50%;
+  }
+  .top-bar .menu-item a {
+    width: 100%;
+  }
+  @media all and (min-width: 992px) {
+    .top-bar .menu {
+      width: 100%;
+    }
+    .top-bar .menu-item a {
+      width: 63%;
+    }
   }
 }

@@ -1,8 +1,15 @@
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   // MS Explorer
+  .modal-content {
+    -ms-overflow-style:none;
+  }
   .triangle {
-    clip-path:unset;
-    background: blue;
+    position:relative;
+    z-index: 0;
+    background:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGlkPSJ0cnlrdXQiIHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEwMCUnIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiBkYXRhLW5hbWU9IkxheWVyIDEiPjx0aXRsZT5VbnRpdGxlZC0xPC90aXRsZT48cG9seWdvbiBwb2ludHM9IjAsMCAwLDEwMCAxMDAsMCIgLz48L3N2Zz4=);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
   .header-wrapper {
       display: -ms-grid;
@@ -15,6 +22,12 @@
         -ms-grid-row-align:center;
       }
     }
+    //Menu width fix
+  .top-bar {
+    .menu {width:50%;}
+    .menu-item a {width:100%;}
+  }
+  // --- edn menu width fix
   .menu {
       -ms-grid-columns: 1fr;
       &.visible {
@@ -39,7 +52,7 @@
   .motivation {
     display: -ms-grid;
     -ms-grid-columns: 1fr;
-    -ms-grid-rows: 1fr 2fr;
+    -ms-grid-rows: auto auto;
     &>h3 {
       -ms-grid-row:1;
     }
@@ -131,7 +144,9 @@
           left:0px;
           transform: none;
           -ms-grid-columns: 1fr 1fr 1fr 1fr;
+          width: 100%;
         }
+      .menu-item a {width:65%;}
       nav >*> .menu-item {
           display: -ms-grid;
           @for $i from 1 through 4 {
@@ -172,8 +187,27 @@
 }
 @supports (-ms-ime-align:auto) {
   //MS Edge
-  .triangle {
-    clip-path:unset;
-    background: url(/img/triangle.svg);
+  .modal-content {
+    -ms-overflow-style:none;
   }
+  .triangle {
+    position:relative;
+    z-index: 0;
+    background:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGlkPSJ0cnlrdXQiIHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEwMCUnIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiBkYXRhLW5hbWU9IkxheWVyIDEiPjx0aXRsZT5VbnRpdGxlZC0xPC90aXRsZT48cG9seWdvbiBwb2ludHM9IjAsMCAwLDEwMCAxMDAsMCIgLz48L3N2Zz4=);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+      //Menu width fix
+    .top-bar {
+      .menu {width:50%;}
+      .menu-item a {width:100%;}
+      }
+    @media all and (min-width: $middle-screen) {
+      .top-bar {
+        .menu {width:100%;}
+        .menu-item a {width: 63%;}
+        }
+  }
+// --- edn menu width fix
 }

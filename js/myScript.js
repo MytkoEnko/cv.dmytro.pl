@@ -13,7 +13,7 @@ window.onload = termsAcceptance;
 function acceptTerms() {
   window.localStorage.setItem('acceptance', 'yes');
   document.getElementById('terms').style.display = "none";
-  document.body.style.overflow = "unset";
+  document.body.style.overflow = "visible";
 }
 // Function to handle Terms declination
 function declineTerms() {
