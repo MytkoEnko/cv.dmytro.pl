@@ -1,0 +1,179 @@
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  // MS Explorer
+  .triangle {
+    clip-path:unset;
+    background: blue;
+  }
+  .header-wrapper {
+      display: -ms-grid;
+      -ms-grid-columns: 6fr 1fr;
+      .branding {
+        -ms-grid-column:1;
+      }
+      #menu-nav {
+        -ms-grid-column:2;
+        -ms-grid-row-align:center;
+      }
+    }
+  .menu {
+      -ms-grid-columns: 1fr;
+      &.visible {
+        display:-ms-grid;
+      }
+      .menu-item {
+        @for $i from 1 through 4 {
+        &:nth-child(#{$i}) {-ms-grid-row:#{$i}; margin-top: 15px;}
+        }
+      }
+    }
+  .calls {
+    display: -ms-grid;
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr;
+    .call{
+      &:nth-child(1){ -ms-grid-row:1; }
+      &:nth-child(2){ -ms-grid-row:2; }
+      &:nth-child(3){ -ms-grid-row:3; }
+    }
+  }
+  .motivation {
+    display: -ms-grid;
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: 1fr 2fr;
+    &>h3 {
+      -ms-grid-row:1;
+    }
+    &>p {
+      -ms-grid-row: 2;
+    }
+  }
+  .project {
+    display: -ms-grid;
+      -ms-grid-columns: 1fr;
+      -ms-grid-rows: minmax(50px, auto);
+      img {
+        -ms-grid-row: 1;
+        -ms-grid-row-span:1;
+        -ms-grid-column: 1;
+        -ms-grid-row-align: center;
+      }
+      h4 {
+        -ms-grid-row: 2;
+      }
+      p{
+        -ms-grid-row: 3;
+      }
+  }
+  // Skills section MS fixes
+  .skills {
+    display: -ms-grid;
+    -ms-grid-columns: 1fr 10px 3fr;
+    //Put odd elements to left and even elements to right columns
+    & > *:nth-child(odd) { -ms-grid-column:1; margin-top:15px; }
+    & > *:nth-child(even) {-ms-grid-column:3; margin-top:15px; }
+    // Rows - put each odd-even pairs into their row
+    @for $i from 1 through 8 {
+    &>*:nth-child(n+#{$i*2-1}):nth-child(-n+#{$i*2}) {-ms-grid-row:$i}
+    }
+  }
+  // Experience and bio MS fixes
+  .experience, .bio {
+  section {
+    display:-ms-grid;
+    -ms-grid-columns: 3fr 5fr;
+    // Group first 4 and last 4 elemtnts into 1 and 2 columns
+      &>*:nth-child(-n+4) {-ms-grid-column:1}
+      &>*:nth-child(n+5) {-ms-grid-column:2}
+      // Put each pair of elements to their row
+      @for $i from 1 through 4 {
+        &>*:nth-child(#{$i}), &>*:nth-child(#{$i+4}){-ms-grid-row:#{$i}; padding-top:15px;}
+      }
+      // remove padding from first-row elements
+      & > *:nth-child(1), & > *:nth-child(5) {padding-top: 0px;}
+    }
+  }
+  .bio > div {
+    display: -ms-grid;
+    -ms-grid-columns: 1fr;
+    img {
+      -ms-grid-row:1;
+      -ms-grid-column-align:center;
+    }
+    p {
+      -ms-grid-row:2;
+      -ms-grid-column-align:center;
+    }
+    }
+  @media all and (min-width: $x-small-screen) {
+    .top-bar > .header-wrapper {
+      -ms-grid-columns: 6fr 1fr;
+      }
+    }
+  @media all and (min-width: $small-screen) {
+    .calls {
+      -ms-grid-columns: 1fr 1fr 1fr;
+      -ms-grid-rows: 1fr;
+      .call{
+        &:nth-child(1){ -ms-grid-row:1; -ms-grid-column:1; }
+        &:nth-child(2){ -ms-grid-row:1; -ms-grid-column:2; }
+        &:nth-child(3){ -ms-grid-row:1; -ms-grid-column:3; }
+      }
+    }
+  }
+  @media all and (min-width: $middle-screen) {
+    .top-bar{
+      &> .header-wrapper {
+            -ms-grid-columns: 2fr 3fr;
+            }
+      & .menu {
+          display: -ms-grid;
+          top: 0px;
+          left:0px;
+          transform: none;
+          -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        }
+      nav >*> .menu-item {
+          display: -ms-grid;
+          @for $i from 1 through 4 {
+          &:nth-child(#{$i}) {-ms-grid-column:#{$i}; -ms-grid-row:1; margin-top: 0px;}
+          }
+        }
+      }
+    .project {
+      -ms-grid-columns: 1fr 2fr;
+      img {
+        -ms-grid-row: 1;
+        -ms-grid-row-span:3;
+        -ms-grid-column: 1;
+        -ms-grid-row-align: center;
+      }
+      h4 {
+        -ms-grid-row: 1;
+        -ms-grid-column:2;
+      }
+      p {
+        -ms-grid-row:2;
+        -ms-grid-column:2;
+      }
+    }
+    .motivation {
+      -ms-grid-columns: 1fr 3fr;
+      -ms-grid-rows:1fr;
+      &>h3 {
+        -ms-grid-column:1;
+        border-bottom: none;
+      }
+      &>p {
+        -ms-grid-column:2;
+        -ms-grid-row:1;
+      }
+    }
+  }
+}
+@supports (-ms-ime-align:auto) {
+  //MS Edge
+  .triangle {
+    clip-path:unset;
+    background: url(/img/triangle.svg);
+  }
+}
