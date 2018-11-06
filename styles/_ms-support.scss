@@ -201,7 +201,7 @@
       //Menu width fix
     .top-bar {
       .menu {width:50%;}
-      .menu-item a {width:100%;}
+      .menu-item a {width:100%; list-style-type: none;}
       }
     @media all and (min-width: $middle-screen) {
       .top-bar {

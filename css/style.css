@@ -788,6 +788,7 @@ footer .in-touch {
   }
   .top-bar .menu-item a {
     width: 100%;
+    list-style-type: none;
   }
   @media all and (min-width: 992px) {
     .top-bar .menu {
