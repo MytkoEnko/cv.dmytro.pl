@@ -4,7 +4,7 @@ $middle-screen: 992px;
 $large-screen: 1200px;
 
 /* Very small devices (480px to 768px) */
-@media (min-width: $x-small-screen) {
+@media all and (min-width: $x-small-screen) {
   .top-bar > .header-wrapper {
     width: 80%;
     margin: 0px auto;
@@ -12,7 +12,7 @@ $large-screen: 1200px;
   }
 }
 /* Small devices (tablets, 768px and up) */
-@media (min-width: $small-screen) {
+@media all and (min-width: $small-screen) {
 .modal-content {
   max-height:unset ;
   overflow: unset;
@@ -24,7 +24,7 @@ $large-screen: 1200px;
  }
 
 /* Medium devices (desktops, 992px and up) */
-@media (min-width: $middle-screen) {
+@media all and (min-width: $middle-screen) {
   .top-bar nav {
     display: block;
     a#menu-toggle {
@@ -87,7 +87,7 @@ $large-screen: 1200px;
  }
 
 /* Large devices (large desktops, 1200px and up) */
-@media (min-width: $large-screen) {
+@media all and (min-width: $large-screen) {
   .top-bar nav {
     .menu-item {
       a {
